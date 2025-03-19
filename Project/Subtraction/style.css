@@ -1,0 +1,29 @@
+.container{
+    width: 500px;
+    height: 400px;
+    border: 3px solid greenyellow;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 4px greenyellow;
+    margin: 100px auto;
+    padding: 10px;
+    text-align: center;
+    background-image: url(https://picsum.photos/id/11/367/267);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#number-1, #number-2{
+    width: 80%;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+#btn-subtract{
+    width: 85%;
+    font-size: 24px;
+    padding: 5px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 6px;
+}

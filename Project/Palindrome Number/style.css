@@ -1,0 +1,48 @@
+.container {
+    width: 450px;
+    height: 350px;
+    margin: 100px auto;
+    padding: 10px;
+    box-shadow: 2px 2px 4px 8px darkseagreen;
+    border: 3px solid seagreen;
+    border-radius: 5px;
+    text-align: center;
+    background-color: lightgreen;
+}
+
+h1 {
+    color: seagreen;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: darksalmon;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 75%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+button:hover {
+    background: lightsalmon;
+}
+p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}

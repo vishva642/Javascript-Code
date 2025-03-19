@@ -1,0 +1,11 @@
+// let minValue=Math.min(25,65,82,14,63,58,63,21,10,15);
+// console.log(minValue);
+// let maxValue=Math.max(25,65,82,14,63,58,63,21,10,15);
+// console.log(maxValue);
+// let arr=[];
+// let arr1=[45,82,41,68,37,80,10,56,5,21];
+// let minValue=Math.min(...arr1);
+// console.log(minValue);
+// let arr1=[45,82,41,68,37,80,10,56,5,21];
+// let maxValue=Math.max(...arr1);
+// console.log(maxValue);

@@ -1,0 +1,45 @@
+.container{
+    width: 500px;
+    height: 450px;
+    border: 3px solid crimson;
+    box-shadow: 0px 0px 5px 8px lightcoral;
+    border-radius: 4px;
+    margin: 100px auto;
+    padding: 10px;
+    text-align: center;
+    background-image: url(https://img.freepik.com/free-photo/abstract-fantasy-landscape-with-color-year-purple-tones_23-2151394128.jpg?uid=R188798564&ga=GA1.1.218147383.1740376454&semt=ais_hybrid);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+input{
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    font-size: 18px;
+    border-radius: 5px;
+    color: darksalmon;
+}
+button{
+    width: 80px;
+    font-size: 24px;
+    background-color: transparent;
+    color: coral;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+button:hover{
+    background-color: crimson;
+}
+input:hover{
+    background-color: crimson;
+}
+h1{
+    color: indianred;
+    font-size: 40px;
+}
+h3{
+    font-size: 40px;
+    color: indianred;
+}

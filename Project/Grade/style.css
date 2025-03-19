@@ -1,0 +1,44 @@
+.container{
+    width: 600px;
+    height: 600px;
+    border: 3px solid crimson;
+    box-shadow: 0px 0px 5px 8px lightcoral;
+    border-radius: 4px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    background-image: url(https://picsum.photos/id/121/367/267);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#input-1{
+    width: 80%;
+    padding: 10px;
+    margin: 15px;
+    background-color: transparent;
+    font-size: 30px;
+    border-radius: 5px;
+    color: darksalmon;
+}
+button{
+    width: 75%;
+    font-size: 30px;
+    background-color: transparent;
+    color: coral;
+    margin: 10px;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: crimson;
+}
+input:hover{
+    background-color: crimson;
+}
+h1{
+    color: indianred;
+    font-size: 60px;
+}
+h3{
+    font-size: 48px;
+    color: indianred;
+}
