@@ -1,6 +1,6 @@
-// WAP to print reverse number of given number? 
+// WAP to check given number is palindrome or not?
 
-let num = 253;
+let num = 252;
 let originalNum = num; // Store the original number
 let rev = 0;
 while (num > 0) {
@@ -9,4 +9,9 @@ while (num > 0) {
     num = Math.floor(num / 10); // Remove the last digit
 }
 console.log("Reversed number:", rev); //Added to show reversed number
-console.log("Original number:", originalNum);
+console.log("Original number:", originalNum); //Added to show original number
+if (originalNum === rev) { // Correct comparison
+    console.log("Palindrome Number");
+} else {
+    console.log("Not Palindrome Number");
+}
