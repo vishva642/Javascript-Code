@@ -1,4 +1,4 @@
-let count = 0;
+let count = 1;
 function add(){
     console.log(`Count : ${count}`);
     count++;
