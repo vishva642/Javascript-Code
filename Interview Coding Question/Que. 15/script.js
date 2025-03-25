@@ -97,7 +97,6 @@ for (let i = 1; i <= 5; i++) {
     console.log(row.trim());  // Print the row (remove trailing space)
 }
 
-
 // 5  4  3  2  1  
 // 5  4  3  2 
 // 5  4  3 
