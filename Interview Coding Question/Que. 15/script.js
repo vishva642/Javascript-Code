@@ -84,10 +84,8 @@ for (let i = 1; i <= 5; i++) {  // Outer loop for rows
 // 11 12 13 14 15
 
 let currentNum1 = 1;  // Start with 1 for the first number
-
 for (let i = 1; i <= 5; i++) {  
     let row = '';  // Initialize an empty string for each row
-    
     for (let j = 1; j <= i; j++) {  // Inner loop to print numbers in each row
         if (i >= 3 && j !== 1 && j !== i) {  
             row += '    ';  // Add 4 spaces between numbers
@@ -96,7 +94,6 @@ for (let i = 1; i <= 5; i++) {
         }
         currentNum1++;  // Increment the number for the next iteration
     }
-    
     console.log(row.trim());  // Print the row (remove trailing space)
 }
 
