@@ -1,44 +1,46 @@
-/* Basic styles for the countdown and quotes app */
+/* Basic CSS styles for page */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f7f7f7;
+    height: 100vh;
+    color: #333;
+    border-radius: 5px;
 }
 
-#app {
+.container {
     text-align: center;
-    background-color: white;
-    padding: 30px;
+    padding: 20px;
+    background-color: coral;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    color: wheat;
 }
 
-#countdown {
-    font-size: 2.5em;
+.accordion-button {
+    background-color: lightcoral;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+.accordion-body{
+    background-color: darksalmon;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+.accordion-item{
+    border-radius: 5px;
+}
+
+/* Add loading spinner while page is loading */
+#loading {
+    display: block;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 30px;
-    color: #3498db;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-top: 30px;
-}
-
-#quote {
-    font-size: 1.2em;
-    font-style: italic;
-    margin-top: 10px;
-    color: #555;
 }
