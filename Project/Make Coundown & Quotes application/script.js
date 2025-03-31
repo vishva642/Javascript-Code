@@ -1,39 +1,31 @@
+function updateCountdown() {
+    const eventDate = new Date("December 31, 2025 23:59:59").getTime();
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = 
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if (diff < 0) {
+        document.getElementById("countdown").innerHTML = "Countdown expired!";
+    }
+}
+setInterval(updateCountdown, 1000);
+
 const quotes = [
-    "The best way to predict the future is to create it.",
-    "You only live once, but if you do it right, once is enough.",
-    "In the end, we will remember not the words of our enemies, but the silence of our friends.",
-    "Life is what happens when you're busy making other plans.",
-    "Get busy living or get busy dying.",
-    "You have within you right now, everything you need to deal with whatever the world can throw at you."
+    "Believe you can and you're halfway there.",
+    "The only limit to our realization of tomorrow is our doubts of today.",
+    "Act as if what you do makes a difference. It does.",
+    "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    "Keep your face always toward the sunshine—and shadows will fall behind you."
 ];
 
-let countdown;
-let timeLeft = 10;
-
-const countdownDisplay = document.getElementById('countdown');
-const quoteDisplay = document.getElementById('quote');
-const startButton = document.getElementById('startButton');
-
-startButton.addEventListener('click', startCountdown);
-
-function startCountdown() {
-    timeLeft = 10; // Reset countdown
-    countdownDisplay.textContent = timeLeft;
-    quoteDisplay.textContent = "Counting down...";
-    
-    clearInterval(countdown); // Clear any existing countdown
-    countdown = setInterval(() => {
-        timeLeft--;
-        countdownDisplay.textContent = timeLeft;
-
-        if (timeLeft <= 0) {
-            clearInterval(countdown);
-            displayRandomQuote();
-        }
-    }, 1000);
-}
-
-function displayRandomQuote() {
+function generateQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    quoteDisplay.textContent = quotes[randomIndex];
+    document.getElementById("quote").innerHTML = quotes[randomIndex];
 }

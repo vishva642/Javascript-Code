@@ -1,17 +1,18 @@
-const notesWrapper=document.getElementById("notes-wrapper")
-const title=document.getElementById("title")
-const content=document.getElementById("content")
-const error=document.getElementById("form-error")
-let notesData=[]
-function createNote(uid,title,text,date){
-    const note=document.createElement("div")
+const notesWrapper=document.getElementById("notes-wrapper");
+const title=document.getElementById("title");
+const content=document.getElementById("content");
+const error=document.getElementById("form-error");
+let notesData=[];
+const createNote = (uid,title,text,date) => {
+    const note=document.createElement("div");
     note.className="note";
     note.id=uid;
-    note.innerHTML=`<div class="note-title">${title}</div>
+    note.innerHTML=`
+    <div class="note-title">${title}</div>
     <div class="note-controls">
-    <button class="note-edit" onclick="editNote(${uid})>Edit</button>
-    <button class="note-save" style="display:none" onclick="saveNote(${uid})>Save</button>
-    <button class="note-delete" onclick="deleteNote(${uid})>Delete</button>
+    <button class="note-edit" onclick="editNote(${uid})">Edit</button>
+    <button class="note-save" style="display:none" onclick="saveNote(${uid})">Save</button>
+    <button class="note-delete" onclick="deleteNote(${uid})">Delete</button>
     </div>
     <div class="note-text">${text}</div>
     <div class="note-date">${date}</div>
@@ -48,7 +49,7 @@ const editNote = (uid) => {
     noteEdit.style.display="none";
     noteSave.style.display="block";
     noteText.focus();
-}
+};
 const saveNote = (uid) => {
     const note=document.getElementById(uid);
     const noteTitle = note.querySelector(".note-title")
@@ -80,17 +81,17 @@ const deleteNote = (uid) => {
     if(!confirmDelete){
         return;
     }
-    const note = document.getElementById(uid)
-    note.parentNote.removeChild(note);
+    const note = document.getElementById(uid);
+    note.parentNode.removeChild(note);
     notesData=notesData.filter((note)=>{
-        return note.uid != uid
+        return note.uid != uid;
     });
-    localStorage.setItem("notes",JSON.stringify(notesData))
+    localStorage.setItem("notes",JSON.stringify(notesData));
 };
 window.addEventListener("load",()=>{
     notesData=localStorage.getItem("notes")
     ? JSON.parse(localStorage.getItem("notes"))
-    :[]
+    :[];
     notesData.forEach((note)=>{
         createNote(note.uid,note.title,note.text,note.date)
     });
