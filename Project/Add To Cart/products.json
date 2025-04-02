@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"iPhone",
+        "price":115000,
+        "image":"images/iphone.jpg"
+    },
+    {
+        "id":2,
+        "name":"Apple Watch",
+        "price":45000,
+        "image":"images/applewatch.jpg"
+    },
+    {
+        "id":3,
+        "name":"iPad",
+        "price":135000,
+        "image":"images/ipad.jpg"
+    },
+    {
+        "id":4,
+        "name":"Airpods",
+        "price":25000,
+        "image":"images/airpods.jpg"
+    },
+    {
+        "id":5,
+        "name":"Mac",
+        "price":150000,
+        "image":"images/mac.jpg"
+    }
+]
