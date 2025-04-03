@@ -8,7 +8,7 @@ async function fetchProducts() {
         console.log(products);
     }
     catch(error){
-        console.log("error fetching products : ", error);
+        console.log("Error fetching products : ", error);
     }
 }
 function displayProducts(filterText="",sort=""){
@@ -36,7 +36,7 @@ function displayProducts(filterText="",sort=""){
 }
 function addToCart(id){
     const product = products.find((p)=>p.id===id);
-    const existingItem = cart.find((item)=>item.id=id);
+    const existingItem = cart.find((item)=>item.id===id);
     if(existingItem){
         existingItem.quantity +=1;
     }
@@ -52,7 +52,7 @@ function updateCartCount(){
     );
 }
 function viewCart(){
-    const cartPage = document.getElementById("cartPage");
+    const cartPage = document.getElementById("cart-page");
     cartPage.classList.remove("hidden");
     const cartItems = document.getElementById("cart-items");
     cartItems.innerHTML="";
@@ -73,4 +73,27 @@ function viewCart(){
         cartItems.appendChild(cartItem);
     });
 }
+function incrementCart(id){
+    cart = cart.map((item)=>
+    item.id===id?{...item,quantity:item.quantity + 1}:item
+);
+viewCart();
+updateCartCount();
+}
+function decrementCart(id){
+    cart = cart.map((item)=>
+    item.id===id?{...item,quantity:item.quantity - 1}:item
+).filter((item)=>item.quantity>0);
+viewCart();
+updateCartCount();
+}
+function closeCart(){
+    document.getElementById("cart-page").classList.add("hidden");
+}
+document.getElementById("searchBox").addEventListener("input",(e)=>{
+    displayProducts(e.target.value);
+})
+document.getElementById("sortPrice").addEventListener("change",(e)=>{
+    displayProducts(document.getElementById("searchBox").value,e.target.value);
+})
 fetchProducts();
