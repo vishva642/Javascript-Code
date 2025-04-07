@@ -60,4 +60,4 @@
 //     salary:500000,
 // };
 // obj1 = {id:1,...obj1, salary:800000,State:"Gujarat"};
-// console.log(obj1);
+// console.log(obj1);           
