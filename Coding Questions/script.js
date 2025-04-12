@@ -171,7 +171,7 @@
 
 // function order(num) {
 //     return String(num).length; // Efficient way to get the number of digits
-// }
+// } 
 // function isArmstrong(num) {
 //     const len = order(num);
 //     let sum = 0;
