@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona API</title>
+</head>
+
+<body>
+    <div id="data"></div>
+    <script>
+        fetch('https://disease.sh/v3/covid-19/countries/India')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('data').innerHTML = `
+        <p>Cases: ${data.cases}</p>
+        <p>Deaths: ${data.deaths}</p>
+        <p>Recovered: ${data.recovered}</p>
+      `;
+            })
+            .catch(err => console.log('Error:', err));
+    </script>
+</body>
+
+</html>
